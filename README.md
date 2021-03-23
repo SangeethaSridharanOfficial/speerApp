@@ -14,11 +14,11 @@ Also made the app in a way it can be clear understable of where to write compone
 **ReactIntl** -- this is to handle the language
 
 ### `LIBRARIES`
-** Material Icons ** [Material Icons Npm](https://www.npmjs.com/package/@material-ui/icons)\
-** Axios ** [Axios](https://www.npmjs.com/package/axios)\
-** Immutable ** [Immutable](https://www.npmjs.com/package/immutable)\
-** SASS ** [SCSS](https://www.npmjs.com/package/node-sass)\
-** React Intl ** [Language](https://www.npmjs.com/package/react-intl)
+**Material Icons** [Material Icons Npm](https://www.npmjs.com/package/@material-ui/icons)\
+**Axios** [Axios](https://www.npmjs.com/package/axios)\
+**Immutable** [Immutable](https://www.npmjs.com/package/immutable)\
+**SASS** [SCSS](https://www.npmjs.com/package/node-sass)\
+**React Intl** [Language](https://www.npmjs.com/package/react-intl)
 
 ### `SUMMARY`
 This app is designed with all the above technologies.\
