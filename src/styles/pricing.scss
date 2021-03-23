@@ -1,0 +1,126 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+$col1: #D24848;
+$col2: #FFB33F;
+$col3: #1FE1E9;
+
+#pricingPage{
+    .pricingSection{
+        @include posWidHei(relative, 100%, 750px);
+        background-color: #191919;
+
+        .content_holder{
+            color: white;
+            @include posWidHei(absolute, 100%, auto);
+            margin-top: 100px;
+            left: 100px;
+
+            .prc_txt{
+                font-size: 40px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-bottom: 10px;
+                width: auto;
+            }
+
+            .prc_msg_txt{
+                display: flex;
+                font-size: 30px;
+                width: 77%;
+            }
+        }
+
+        .pricing_holder{
+            @include posWidHei(absolute, auto, auto);
+            display: flex;
+            margin-top: 290px;
+            margin-left: 100px;
+            gap: 50px;
+            color: white;
+
+
+            .pr_header{
+                display: flex;
+                flex-wrap: wrap;
+
+                .header_txt, .hor_line, .cal_txt, .dollar_txt{
+                    display: block;
+                    width: 100%;
+                }
+
+                .header_txt{
+                    font-size: 20px;
+                }
+
+                .hor_line{
+                    @include posWidHei(unset, 70px, 2px);
+                    margin-top: 10px;
+                }
+
+                .hor_line.hl1{
+                    background-color: $col1;
+                }
+
+                .hor_line.hl2{
+                    background-color: $col2;
+                }
+
+                .hor_line.hl3{
+                    background-color: $col3;
+                }
+
+                .cal_txt{
+                    font-size: 30px;
+                }
+
+                .dollar_txt{
+                    font-size: 45px;
+                }
+            }
+
+            .prh1{
+                color: $col1;
+            }
+
+            .prh2{
+                color: $col2;
+            }
+
+            .prh3{
+                color: $col3;
+            }
+
+            .ulEle{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                font-size: 18px;
+            }
+
+            .sel_txt{
+                padding: 6px 41px;
+                font-size: 14px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            .sel_txt.st1{
+                background-color: $col1;
+            }
+
+            .sel_txt.st2{
+                background-color: $col2;
+            }
+
+            .sel_txt.st3{
+                background-color: $col3;
+            }
+        }
+    }
+}

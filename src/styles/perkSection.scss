@@ -1,0 +1,121 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+#perkSection{
+    @include posWidHei(relative, 100%, 450px);
+    background-color: #191919;
+
+    .try_it_now{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        @include posWidHei(absolute, auto, auto);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 30px;
+        border-radius: 21px;
+        right: 25px;
+        background-image: linear-gradient(to right, #1FE1E9, #5E33D1, #D34848, #FFB33F);
+        top: 40px;
+        overflow: hidden;
+        z-index: 5;
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        .tin_txt{
+            pointer-events: none;
+        }
+    }
+
+    .perk_content_holder{
+        @include posWidHei(relative, 100%, 180px);
+        display: flex;
+        color: white;
+        align-items: flex-end;
+        margin-left: 140px;
+        font-size: 40px;
+    }
+
+    .contents{
+        @include posWidHei(relative, 100%, auto);
+
+        .red_content_holder, .yel_content_holder, .blue_content_holder{
+            display: inline-flex;
+            @include posWidHei(relative, 200px, auto);
+            color: white;
+
+            .horiz_line {
+                @include posWidHei(absolute, 40px, 2px);
+            }
+
+            .hor1{
+                background-color: #D34848;
+            }
+
+            .hor2{
+                background-color: #1FE1E9;
+            }
+
+            .hor3{
+                background-color: #FFB33F;
+            }
+
+            .co_txt{
+                @include posWidHei(absolute, 100%, auto);
+                top: 10px;
+                font-size: 24px;
+            }
+
+            .red_co_txt{
+                color: #D34848;
+            }
+
+            .yel_co_txt{
+                color: #FFB33F;
+            }
+
+            .blue_co_txt{
+                color: #1FE1E9;
+            }
+
+            .co_msg{
+                @include posWidHei(absolute, 100%, auto);
+                top: 100px;
+            }
+        }
+        .red_content_holder{
+            margin-left: 140px;
+        }
+
+        .blue_content_holder{
+            margin-left: 30px;
+        }
+
+        .yel_content_holder{
+            margin-left: 30px;
+        }
+
+        .co_msg, .co_txt {
+            display: block;
+        }
+    }
+}
+
+#perkSection.pricing{
+    background-color: #D34848;
+
+    .red_co_txt, .yel_co_txt, .blue_co_txt{
+        color: white !important;
+    }
+
+    .hor1, .hor2, .hor3{
+        background-color: white !important;
+    }
+
+    .co_msg {
+        color: black !important;
+    }
+}

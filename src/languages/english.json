@@ -1,0 +1,72 @@
+{
+    "language": {
+        "wa.it.is" : "What is it",
+        "pr.txt" : "Perks",
+        "prc.txt" : "Pricing",
+        "he.txt.ap": "EXP|CON",
+
+        "h.s.cnt1.txt" : "Interactive Concert Experience",
+        "h.s.cnt2.txt" : "Experience your favourite artists like never before and from the comfort of your home.",
+        "tr.it.no" : "Try it now",
+
+        "he.su.txt": "SUPERIOR SOUND",
+        "he.ex.txt": "Experience live versions of your favourite songs.",
+        "see.demo": "SEE DEMO",
+        "cl.txt": "CLICK",
+
+        "fr.ro.txt": "FRONT ROW SEATS",
+        "fr.ex.txt": "Experience concerts up close and personal.",
+
+        "re.c.txt": "Subscription Payment Model",
+        "c.msg": "No commitment, cancel anytime. Never worry about forgetting a payment again!",
+        "bl.c.txt": "No Fee Cancelation Policy",
+        "ye.c.txt": "Subscription Payment Model",
+        "pe.c.txt": "PERKS",
+
+        "pr.msg.txt": "Test out our app today! Choose from three subscription Based payment models.",
+        "pr.ba": "BASIC",
+        "pr.mo": "MONTHLY",
+        "pr.adv": "ADVANCED",
+        "pr.yr": "YEARLY",
+        "pr.pro": "PRO",
+        "pr.sel": "SELECT",
+        "p.v.g": "Very good",
+        "p.am": "Amazing",
+        "p.pj": "Perfect job",
+        "p.lt": "Love this",
+        "p.isg": "it's so good",
+        "p.fe": "Features",
+        "p.vv.g": "Very very good",
+        "p.eam": "Even Amazing",
+        "p.em": "Even more",
+        "p.ltm": "Love this more",
+        "p.issg": "it's so so good",
+        "p.mfe": "More Features",
+
+
+        "pa.txt": "PAYMENT",
+        "se.txt": "1. Select your plan",
+        "pl.bas": "BASIC",
+        "pl.adv": "ADVANCED",
+        "pl.pro": "PRO",
+        "fn.txt": "FULL NAME",
+        "ba.txt": "BILLING ADDRESS",
+        "ci.txt": "CITY",
+        "po.co.txt": "POSTAL CODE",
+        "coun.txt": "COUNTRY",
+        "bi.info": "2. Billing Information",
+
+        "ch.n.txt": "CARDHOLDER’S NAME",
+        "cnum.txt": "CARD NUMBER",
+        "ex.m.txt": "EXPIRY MONTH",
+        "exy.txt": "EXPIRY YEAR",
+        "cvv.txt": "CVV",
+        "crd.info": "3. Credit Card Information",
+
+        "tac.txt": "By continuing, I acknowledge that I’ve read and agree to the <b>Terms of Service</b> & <b>Privacy Policy.</b>",
+        "dowl.txt": "DOWNLOAD",
+
+        "mail.txt": "support@experienceconcerts.co",
+        "copy.txt": "2019 © All Rights Reserved | Speer Technologies Incorporated"
+    }
+}

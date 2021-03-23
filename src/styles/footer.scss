@@ -1,0 +1,44 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+#footerSection{
+    user-select: none;
+    @include posWidHei(inherit, 100%, 300px);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #5E33D1;
+    color: white;
+
+    .mail_holder{
+        @include posWidHei(relative, auto, auto);
+        margin: 90px 0 0 50px;
+        display: flex;
+        align-items: center;
+
+        .mailIcon{
+            margin: 0 10px 0 0;
+        }
+
+        .mail_txt{
+            letter-spacing: .1em;
+        }
+    }
+
+    .foo_holder{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        margin-top: 60px;
+
+        .exp_txt{
+           margin: 0;
+           font-size: 30px;
+        }
+
+        .copy_txt{
+            font-size: 13px;
+        }
+    }
+}

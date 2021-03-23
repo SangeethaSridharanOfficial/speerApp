@@ -1,0 +1,215 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+$col1: #D24848;
+$col2: #FFB33F;
+$col3: #1FE1E9;
+
+
+#paymentSection{
+    user-select: none;
+    @include posWidHei(absolute, 100%, 900px);
+    font-family: Arial, Helvetica, sans-serif;
+
+    .pay_header{
+        @include posWidHei(relative, auto, auto);
+        margin: 100px 0 0 100px;
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .sel_plan_holder{
+        @include posWidHei(relative, auto, auto);
+        margin: 45px 0 0 100px;
+
+        .sel_txt{
+            font-size: 30px;
+        }
+
+        .plan_holder{
+            margin: 20px 0 0 0;
+
+            .plans_holder{
+                cursor: pointer;
+                display: inline-flex;
+                margin: 0 30px 0 0;
+                align-items: center;
+
+                .circle{
+                    @include posWidHei(unset, 10px, 10px);
+                    border-radius: 50px;
+                    border: 2px solid;
+                    margin: 0 10px 0 0;
+                    background-color: transparent;
+                }
+
+                .circle.active.c1{
+                    background-color: $col1;
+                    border: 2px solid $col1;
+                }
+
+                .circle.active.c2{
+                    background-color: $col2;
+                    border: 2px solid $col2;
+                }
+
+                .circle.active.c3{
+                    background-color: $col3;
+                    border: 2px solid $col3;
+                }
+
+                .plan{
+                    font-weight: bold;
+                }
+
+                .plan.basic{
+                    color: $col1;
+                }
+
+                .plan.advanced{
+                    color: $col2;
+                }
+
+                .plan.pro{
+                    color: $col3;
+                }
+            }
+        }
+    }
+
+    .txt{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .billing_section{
+        @include posWidHei(relative, auto, auto);
+
+        .bill_infos{
+            @include posWidHei(unset, 450px, auto);
+            display: inline-block;
+
+            .bi_info{
+                font-size: 30px;
+                margin: 60px 0 0 100px;
+            }
+            .fn_txt, .ba_txt, .coun_txt {
+                margin: 20px 0 10px 100px;
+            }
+            .full_n_tf, .bill_ad_tf, .coun_tf{
+                @include posWidHei(unset, 320px, 25px);
+                margin: 0px 0 10px 100px;
+            }
+
+            .city_pos{
+                @include posWidHei(relative, 100%, 80px);
+                .ci_txt{
+                    @include posWidHei(absolute, auto, auto);
+                    margin: 20px 0 10px 100px;
+                }
+                .city_tf{
+                    @include posWidHei(absolute, 140px, 25px);
+                    left: 100px;
+                    top: 40px;
+                }
+
+                .pc_txt{
+                    @include posWidHei(absolute, auto, auto);
+                    left: 280px;
+                    top: 8px;
+                }
+                .po_co_tf{
+                    @include posWidHei(absolute, 140px, 25px);
+                    left: 280px;
+                    top: 40px;
+                }
+            }
+
+            .country_ar{
+                @include posWidHei(absolute, 30px, 30px);
+                left: 390px;
+            }
+        }
+
+        .credit_infos{
+            @include posWidHei(unset, 450px, auto);
+            display: inline-block;
+            margin-left: 25px;
+
+            .bi_info{
+                font-size: 30px;
+                margin: 60px 0 0 0px;
+            }
+
+            .c_ho_txt, .cnum_txt {
+                margin: 20px 0 10px 0px;
+            }
+            .c_ho_tf, .cnum_tf, .cvv_tf{
+                @include posWidHei(unset, 320px, 25px);
+                margin: 0px 0 10px 0px;
+            }
+
+            .emon_yr{
+                @include posWidHei(relative, 100%, 80px);
+                .ex_m_txt {
+                    @include posWidHei(absolute, auto, auto);
+                    margin: 20px 0 10px 0px;
+                }
+                .exm_tf{
+                    @include posWidHei(absolute, 140px, 25px);
+                    left: 0px;
+                    top: 40px;
+                }
+
+                .exy_txt {
+                    @include posWidHei(absolute, auto, auto);
+                    left: 180px;
+                    top: 8px;
+                }
+                .exy_tf{
+                    @include posWidHei(absolute, 140px, 25px);
+                    left: 180px;
+                    top: 40px;
+                }
+            }
+
+            .exm_ar, .exy_ar{
+                @include posWidHei(absolute, 30px, 30px);
+            }
+
+            .exm_ar{
+                left: 115px;
+                top: 40px;
+            }
+
+            .exy_ar{
+                left: 295px;
+                top: 40px;
+            }
+        }
+
+        .terms_holder{
+            .tac_txt{
+                font-size: 12px;
+                margin: 50px 0 0 100px;
+                @include posWidHei(unset, 290px, auto);
+
+                b{
+                    color: #2F1FE9;
+                }
+            }
+
+            .dowl_txt{
+                margin-left: 100px;
+            }
+        }
+    } 
+
+    input[type=text]:focus{
+        border: none;
+        border-bottom: 3px solid #2F1FE9;
+    }
+}

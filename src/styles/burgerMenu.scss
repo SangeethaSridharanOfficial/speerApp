@@ -1,0 +1,139 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+#burgerMenu{
+    @include posWidHei(absolute, auto, auto);
+    z-index: 10;
+    border-bottom-right-radius: 55%;
+    border-top-right-radius: 48%;
+    background-color: black;
+    color: white;
+
+    .header_holder{
+        display: flex;
+
+        .header_txt_holder{
+            justify-self: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px 0px 0px 20px;
+
+        }
+        .option_icons{
+            @include posWidHei(relative, 55px, 33px);
+            display: flex;
+            align-content: space-evenly;
+            flex-wrap: wrap;
+            cursor: pointer;
+            margin: 30px 0px 20px 30px;
+    
+            .hor_icon{
+                @include posWidHei(unset, 80%, 5px);
+                display: block;
+                background-color: white
+            }
+        }
+    }
+    
+
+    .options_holder{
+        @include posWidHei(unset, 300px, 150px);
+        display: block;
+        animation: openMenu 200ms linear;
+        .opt_hol{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            @include posWidHei(unset, 100%, 100%);
+
+            .lis{
+                @include posWidHei(unset, 100%, 40px);
+                margin-left: 30px;
+                font-size: 30px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .lis.pricing.whatIsIt {
+                color: black;
+            }
+
+            .lis.payment.whatIsIt {
+                color: black;
+            }
+
+            .lis.pperk.perks{
+                color: #D34848
+            }
+
+            .lis.hero.whatIsIt{
+                color: #D34848;
+            }
+
+            .lis.whatIsIt.su{
+                color: #D34848;
+            }
+
+            .lis.whatIsIt.yellow{
+                color: #FFB33F;
+            }
+
+            .lis.perks.perk{
+                color: black;
+            }
+        }
+
+    }
+
+    .options_holder.closed{
+        display: none;
+    }
+}
+
+#burgerMenu.pricing{
+    background-color: #1FE1E9;
+}
+
+#burgerMenu.perk{
+    background-color: #1FE1E9;
+}
+
+#burgerMenu.closed{
+    background-color: transparent !important;
+}
+
+#burgerMenu.payment{
+    background-color: #1FE1E9;
+
+    .hor_icon{
+        background-color: black !important;
+    }
+
+    .header_txt{
+        color: black !important;
+    }
+}
+
+@keyframes openMenu{
+    0%{
+        width: 0;
+        height: 0;
+        max-width: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    100%{
+        width: 300px;
+        height: 150px;
+        opacity: 1; 
+        max-width: 300px;
+        max-height: 400px;
+        transform: translateX(0);
+        transition: transform 200ms, height 800ms width 200ms;
+    }
+}

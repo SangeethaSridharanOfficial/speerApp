@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import MainPage from './components/mainPage';
+import store from './store'; // Here i have created the store with sagas and reducers
+import './styles/index.scss'; // Here i have all scss paths and main css styles
+import { IntlProvider } from 'react-intl'; // For Language
+import EnMessages from './languages/english.json'; // Here i have all the contents related to the app
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/**
+ * @returns the Mainpage of the app
+ *  In this, i have used "IntlProvider" to handle the language overall app
+ *  "locale" and "messages", -- in this we can pass dynamic values according to the user wish for the language
+ * 
+ * I have used the functional component to make the code clean and clear
+ */
+const App = () => {
+  return <Provider store={store}>
+    <IntlProvider locale="en" messages={EnMessages['language']}>
+      <MainPage/>
+    </IntlProvider>
+  </Provider>
+};
 
 export default App;

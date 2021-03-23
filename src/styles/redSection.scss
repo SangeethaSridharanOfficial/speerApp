@@ -1,0 +1,123 @@
+@mixin  posWidHei($pos, $wid, $hei) {
+    position: $pos;
+    width: $wid;
+    height: $hei;
+}
+
+#redSection{
+    @include posWidHei(relative, 100%, 450px);
+    background-color: #D34848;
+    display: flex;
+
+    .try_it_now{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        @include posWidHei(absolute, auto, auto);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 30px;
+        border-radius: 21px;
+        right: 25px;
+        background-color: white;
+        top: 40px;
+        overflow: hidden;
+        z-index: 5;
+        color: #D34848;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        span{
+            pointer-events: none;
+        }
+    }
+
+    .try_it_now::before {
+        --size: 0;
+        --sizey : 0;
+        content: '';
+        position: absolute;
+        left: var(--x);
+        top: var(--x);
+        width: var(--size);
+        height: var(--sizey);
+        background: radial-gradient(circle closest-side, #4405f7, transparent);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        transition: width .2s ease-in-out, height .2s ease-in-out;
+    }
+    .try_it_now:hover::before {
+        --size: 300px;
+        --sizey: 1000px
+    }
+
+
+    .left_side_container{
+        @include posWidHei(relative, 56%, auto);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .head1{
+            @include posWidHei(absolute, auto , auto);
+            display: block;
+            bottom: 246px;
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .head2{
+            @include posWidHei(absolute, auto , auto);
+            display: block;
+            font-size: 30px;
+            left: 80px;
+            bottom: 169px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .see_demo_btn{
+            @include posWidHei(absolute, auto , auto);
+            display: block;
+            color: #D34848;
+            bottom: 110px;
+            left: 78px;
+            padding: 11px 35px;
+            background-color: white;
+            border-radius: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    .right_side_container{
+        @include posWidHei(relative, 44%, auto);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .speaker {
+            @include posWidHei(absolute, 160px, 210px);
+        }
+
+        .sp1{
+            top: 124px;
+            left: 50px;
+        }
+
+        .sp2{
+            top: 190px;
+            left: 220px;
+        }
+
+        .click_holder{
+            @include posWidHei(absolute, auto, auto);
+            padding: 30px 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+            color: white;
+            bottom: 40px;
+            cursor: pointer;
+        }
+    }
+}
