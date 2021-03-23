@@ -7,11 +7,11 @@ I have also used the **Language(ReactIntl)** to our app to make the app understa
 Also made the app in a way it can be clear understable of where to write components, actions, reducers, styles and so on.
 
 ### `TECHNOLOGIES USED`
-** REACT ** -- Used the functional component \
-** REDUX ** \
-** HTML5 ** \
-** SCSS ** \
-** ReactIntl ** -- this is to handle the language
+**REACT** -- Used the functional component \
+**REDUX** \
+**HTML5** \
+**SCSS** \
+**ReactIntl** -- this is to handle the language
 
 ### `LIBRARIES`
 ** Material Icons ** [Material Icons Npm](https://www.npmjs.com/package/@material-ui/icons)\
@@ -22,8 +22,8 @@ Also made the app in a way it can be clear understable of where to write compone
 
 ### `SUMMARY`
 This app is designed with all the above technologies.\
-In this we have three major components which are **MainPage, Pricing** and **Payment**\
-**MainPage** -- In this, it consists of 5 section and each has their own HTML and css styles\
+In this we have three major components which are **MainPage, Pricing** and **Payment**.\
+**MainPage** -- In this, it consists of 5 section and each has their own HTML and css styles.\
 **Pricing** -- In this, it has the description of the plans and also perk section. If we click on the select it will take to payment section according to the selection made.\
 **Payment** -- In this, it consists of all the labels and text fields to get the payment details like address and card details and also it has **Download** button with animations.
 
